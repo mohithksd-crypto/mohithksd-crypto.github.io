@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You — MAYA ಮಾಯಾ</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Bebas+Neue&family=Noto+Sans+Kannada:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    background: #080808;
+    color: #e8e4dc;
+    font-family: 'Cormorant Garamond', serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1.5rem;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background:
+      radial-gradient(ellipse 60% 50% at 50% 50%, rgba(201,168,76,0.07) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 20% 80%, rgba(192,57,43,0.05) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .particles {
+    position: fixed; inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .particle {
+    position: absolute;
+    width: 2px; height: 2px;
+    background: rgba(201,168,76,0.4);
+    border-radius: 50%;
+    animation: float linear infinite;
+  }
+  @keyframes float {
+    0% { transform: translateY(100vh); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(-10vh); opacity: 0; }
+  }
+
+  .success-box {
+    position: relative; z-index: 2;
+    max-width: 560px;
+    width: 100%;
+    animation: reveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  @keyframes reveal {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .toggle-icon {
+    font-size: 2.2rem;
+    margin-bottom: 0.8rem;
+    display: block;
+    animation: pulse 1.2s ease infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+  }
+
+  .title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.8rem, 10vw, 5rem);
+    letter-spacing: 0.1em;
+    color: #c9a84c;
+    line-height: 0.9;
+  }
+  .title-kn {
+    font-family: 'Noto Sans Kannada', sans-serif;
+    font-size: 0.9rem;
+    color: #7a7a80;
+    letter-spacing: 0.2em;
+    display: block;
+    margin-top: 0.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .divider {
+    width: 60px; height: 1px;
+    background: linear-gradient(to right, transparent, #c9a84c, transparent);
+    margin: 0 auto 1.2rem;
+  }
+
+  .thank-you-heading {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(1rem, 3.5vw, 1.6rem);
+    letter-spacing: 0.15em;
+    color: #ffffff;
+    margin-bottom: 1.2rem;
+  }
+
+  .message {
+    font-size: clamp(0.95rem, 1.8vw, 1.15rem);
+    font-weight: 300;
+    line-height: 1.8;
+    color: #a8a39b;
+    max-width: 480px;
+    margin: 0 auto 0.8rem;
+  }
+  .message strong { color: #c9a84c; font-weight: 600; }
+  .message em { color: #e8e4dc; font-style: italic; }
+
+  .sub-message {
+    font-size: 0.88rem;
+    color: #4a4a50;
+    line-height: 1.7;
+    max-width: 420px;
+    margin: 0 auto 1.2rem;
+  }
+  .sub-message strong { color: #6a6a70; }
+
+  .payment-id {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    color: #6a6a72;
+    margin-bottom: 1.5rem;
+    font-family: monospace;
+  }
+
+  .back-btn {
+    display: inline-block;
+    border: 1px solid #c9a84c;
+    color: #c9a84c;
+    padding: 0.75rem 2.2rem;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.2em;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .back-btn::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: #c9a84c;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  .back-btn:hover::before { transform: scaleX(1); }
+  .back-btn:hover { color: #080808; }
+  .back-btn span { position: relative; z-index: 1; }
+
+  .share-text {
+    margin-top: 1rem;
+    font-size: 0.75rem;
+    color: #2a2a30;
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+
+<div class="particles" id="particles"></div>
+
+<div class="success-box">
+  <span class="toggle-icon" id="toggleIcon">❤️</span>
+  <div class="title">MAYA</div>
+  <span class="title-kn">ಮಾಯಾ</span>
+  <div class="divider"></div>
+
+  <div class="thank-you-heading">Thank You for Supporting Maya</div>
+
+  <p class="message">
+    Your contribution brings us <strong>one step closer</strong> to turning this dream into reality.
+    Every bit of support means the <em>world</em> to our team and keeps the vision alive.
+  </p>
+
+  <p class="message" style="font-size:1.2rem; margin: 0.8rem auto;">❤️ 🎬</p>
+
+  <p class="sub-message">
+    We will reach out to you soon with updates on the film's journey.<br>
+    You are now a part of <strong style="color:#c9a84c;">MAYA ಮಾಯಾ.</strong>
+  </p>
+
+  <div class="payment-id" id="paymentId"></div>
+
+  <a href="/" class="back-btn"><span>← Back to Maya</span></a>
+
+  <p class="share-text">Share the love — help us reach more believers 🙏</p>
+</div>
+
+<script>
+  // Alternate between ❤️ and 🎬 like a heartbeat
+  const icons = ['❤️', '🎬'];
+  let i = 0;
+  setInterval(() => {
+    i = (i + 1) % 2;
+    document.getElementById('toggleIcon').textContent = icons[i];
+  }, 1200);
+
+  // Show payment ID
+  const params = new URLSearchParams(window.location.search);
+  const paymentId = params.get('payment_id');
+  if (paymentId) {
+    document.getElementById('paymentId').textContent = 'Payment ID: ' + paymentId;
+  }
+
+  // Floating particles
+  const container = document.getElementById('particles');
+  for (let j = 0; j < 25; j++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    p.style.left = Math.random() * 100 + 'vw';
+    p.style.animationDuration = (6 + Math.random() * 10) + 's';
+    p.style.animationDelay = (Math.random() * 8) + 's';
+    p.style.width = p.style.height = (1 + Math.random() * 3) + 'px';
+    container.appendChild(p);
+  }
+</script>
+</body>
+</html>
