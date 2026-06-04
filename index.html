@@ -841,6 +841,109 @@
     .kasaragod-inner { flex-direction: column; }
   }
 
+
+  /* FIRST BELIEVERS */
+  .believers-section {
+    padding: 4rem 0 3rem;
+    background: linear-gradient(180deg, #0a0a0e 0%, #0e0e14 100%);
+    border-top: 1px solid rgba(201,168,76,0.15);
+  }
+  .believers-inner {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 2rem;
+  }
+  .believers-eyebrow {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.4em;
+    color: var(--red);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+  .believers-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    color: var(--white);
+    letter-spacing: 0.05em;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+  }
+  .believers-intro {
+    font-size: 1.05rem;
+    color: #c8c8cc;
+    font-weight: 500;
+    line-height: 1.9;
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .believer-card {
+    border: 1px solid rgba(201,168,76,0.7);
+    background: linear-gradient(135deg, rgba(201,168,76,0.10) 0%, rgba(201,168,76,0.04) 60%, rgba(139,0,0,0.06) 100%);
+    padding: 2.5rem 3rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    box-shadow: 0 0 40px rgba(201,168,76,0.12), 0 0 80px rgba(201,168,76,0.05), inset 0 0 30px rgba(201,168,76,0.04);
+  }
+  .believer-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold) 30%, #fff8e0 50%, var(--gold) 70%, transparent);
+  }
+  .believer-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(201,168,76,0.4), transparent);
+  }
+  .believer-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem;
+    color: var(--gold);
+    letter-spacing: 0.12em;
+    margin-bottom: 0.4rem;
+    text-shadow: 0 0 20px rgba(201,168,76,0.4);
+  }
+  .believer-amount {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.8rem;
+    color: var(--white);
+    letter-spacing: 0.05em;
+    margin-bottom: 0.8rem;
+    text-shadow: 0 0 30px rgba(255,255,255,0.15);
+  }
+  .believer-desc {
+    font-size: 0.85rem;
+    color: #9a9a9a;
+    line-height: 1.7;
+    font-style: italic;
+  }
+  .believers-gratitude {
+    font-size: 0.85rem;
+    color: #7a7a80;
+    margin-top: 2rem;
+    line-height: 1.8;
+  }
+
+  .hero-indie-tag {
+    font-size: 1.15rem;
+    color: #e8e4dc;
+    font-weight: 500;
+    line-height: 1.85;
+    letter-spacing: 0.02em;
+    margin-top: 0.6rem;
+    margin-bottom: 0.8rem;
+    max-width: 520px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
   /* FUND GOALS */
   .fund-goals {
     display: grid;
@@ -1717,7 +1820,7 @@
   .director-role { font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 1.2rem; }
   .director-line { width: 50px; height: 2px; background: linear-gradient(to right, var(--gold), var(--red)); margin-bottom: 1.5rem; }
   .director-quote { font-size: 1.05rem; font-style: italic; font-weight: 300; color: var(--gold); line-height: 1.8; border-left: 2px solid var(--gold); padding-left: 1.2rem; margin: 0; }
-  .director-right p { font-size: 1rem; line-height: 1.85; color: #9a9690; font-weight: 300; margin-bottom: 1rem; }
+  .director-right p { font-size: 1.05rem; line-height: 1.9; color: #c5c1b9; font-weight: 400; margin-bottom: 1rem; }
   .director-right p strong { color: var(--white); font-weight: 600; }
   .director-right p em { color: var(--text); font-style: italic; }
   .director-works { margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem; }
@@ -1839,11 +1942,11 @@
     background: var(--border);
   }
   .wcf-col p {
-    font-size: clamp(0.9rem, 1.5vw, 1.05rem);
-    line-height: 1.9;
-    color: rgba(232,228,220,0.85);
+    font-size: clamp(1rem, 1.6vw, 1.15rem);
+    line-height: 1.95;
+    color: rgba(232,228,220,0.95);
     margin-bottom: 1.4rem;
-    font-weight: 300;
+    font-weight: 400;
   }
   .wcf-col p:last-child { margin-bottom: 0; }
   .wcf-col p strong { color: var(--gold); font-weight: 600; }
@@ -2125,7 +2228,8 @@
       MAYA
       <span class="hero-title-kannada">ಮಾಯಾ</span>
     </h1>
-    <div class="hero-film-label reveal">THE FILM</div>
+    <div class="hero-film-label reveal">THE INDEPENDENT FILM</div>
+    <p class="hero-indie-tag reveal">An independent film — no studio, no production house. Built entirely on passion, craft, and the belief that stories like this deserve to be told.</p>
 
     <!-- New hero lines below MAYA title -->
     <p class="hero-supporters-line reveal">We are seeking supporters who believe in dreams, storytelling, and independent cinema. Your small support can help turn our dream into reality.</p>
@@ -2147,6 +2251,59 @@
     <div class="scroll-line"></div>
   </div>
 </section>
+
+<!-- PROGRESS BAR -->
+<section class="progress-strip">
+  <div class="container">
+    <div class="progress-strip-inner reveal">
+      <div class="progress-strip-goals">
+        <div class="progress-strip-goal">
+          <span class="psg-amount">₹50,000</span>
+          <span class="psg-label">Raised so far</span>
+        </div>
+        <div class="progress-strip-goal center">
+          <span class="psg-amount" style="color:var(--red);">₹7 Lakhs</span>
+          <span class="psg-label">Phase One Goal</span>
+        </div>
+        <div class="progress-strip-goal right">
+          <span class="psg-amount" style="color:var(--gold);">₹25 Lakhs</span>
+          <span class="psg-label">Full Film Goal</span>
+        </div>
+      </div>
+      <div class="progress-strip-bar">
+        <div class="progress-strip-fill" style="width:7.1%"></div>
+        <div class="progress-strip-marker" style="left:28%">
+          <span class="psm-label">₹7L</span>
+        </div>
+      </div>
+      <div class="progress-strip-meta">
+        <span class="psm-raised">₹50,000 Raised · 7.1% of Phase One Goal</span>
+        <span class="psm-backers">1 Backer</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FIRST BELIEVERS -->
+<section class="believers-section">
+  <div class="container">
+    <div class="believers-inner">
+      <p class="believers-eyebrow reveal">The First Believers</p>
+      <h2 class="believers-title reveal">Every Film Begins With a Dream</h2>
+      <p class="believers-intro reveal">But some people choose to believe in that dream even before the world sees it. We extend our heartfelt gratitude to our early supporter for standing with independent Kannada storytelling from the very beginning.</p>
+
+      <div class="believer-card reveal">
+        <div class="believers-eyebrow" style="margin-bottom:0.5rem;">Early Production Support</div>
+        <div class="believer-name">Orfin Biocare Pvt. Ltd. · Harikiran H</div>
+        <div class="believer-amount">₹50,000</div>
+        <div class="believer-desc">Contributed towards the journey of MAYA (ಮಾಯಾ)</div>
+      </div>
+
+      <p class="believers-gratitude reveal">This support is more than a contribution — it is trust, encouragement, and belief in cinema created with passion.<br><br>With gratitude ❤️</p>
+    </div>
+  </div>
+</section>
+
 
 <!-- WHY THIS FILM MATTERS — MERGED -->
 <section class="why-crowdfunding" id="why-crowdfunding">
@@ -2274,6 +2431,9 @@
         </p>
         <p class="reveal reveal-delay-2">
           The script is complete. The crew is assembled. The cast — four deeply talented artists — is committed. All we need now is the one thing that makes cinema possible: <strong>a community of believers willing to back a bold vision.</strong>
+        </p>
+        <p class="reveal reveal-delay-3 hero-indie-tag" style="border-left: 2px solid var(--red); padding-left: 1rem; font-style: italic;">
+          This is a fully independent production — not backed by any studio or production house. Every frame is funded by people who believe in the power of honest storytelling.
         </p>
         <p class="reveal reveal-delay-3">
           The film will also be <strong>dubbed in Malayalam</strong> — a natural extension of its roots. Maya is set in <strong>Kasaragod</strong>, a culturally rich border region where Kannada, Tulu, and Malayalam languages and traditions beautifully coexist. The story speaks directly to this shared cultural identity, making it resonate just as deeply with Malayalam audiences.
@@ -2451,8 +2611,8 @@
         </div>
       </div>
 
-      <p class="countdown-subtitle reveal" style="margin-top:0.5rem;">Campaign goes live Monday night at 8:00 PM.</p>
-      <span class="countdown-end-label reveal">Campaign Launches Monday, 8:00 PM</span>
+      <p class="countdown-subtitle reveal" style="margin-top:0.5rem;">Campaign goes live tonight at 8:00 PM IST · Ends June 18.</p>
+      <span class="countdown-end-label reveal">Campaign Launches Tonight · June 3, 8:00 PM IST</span>
 
       <div class="countdown-cta-wrap reveal">
         <a href="#fund" class="btn-primary"><span>Support Before It Ends</span></a>
@@ -2461,37 +2621,6 @@
   </div>
 </section>
 
-<!-- PROGRESS BAR -->
-<section class="progress-strip">
-  <div class="container">
-    <div class="progress-strip-inner reveal">
-      <div class="progress-strip-goals">
-        <div class="progress-strip-goal">
-          <span class="psg-amount">₹0</span>
-          <span class="psg-label">Raised so far</span>
-        </div>
-        <div class="progress-strip-goal center">
-          <span class="psg-amount" style="color:var(--red);">₹7 Lakhs</span>
-          <span class="psg-label">Phase One Goal</span>
-        </div>
-        <div class="progress-strip-goal right">
-          <span class="psg-amount" style="color:var(--gold);">₹25 Lakhs</span>
-          <span class="psg-label">Full Film Goal</span>
-        </div>
-      </div>
-      <div class="progress-strip-bar">
-        <div class="progress-strip-fill" style="width:0%"></div>
-        <div class="progress-strip-marker" style="left:28%">
-          <span class="psm-label">₹7L</span>
-        </div>
-      </div>
-      <div class="progress-strip-meta">
-        <span class="psm-raised">₹0 Raised · 0% of Phase One Goal</span>
-        <span class="psm-backers">0 Backers</span>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- CROWDFUNDING -->
 <section class="fund" id="fund">
@@ -2514,7 +2643,31 @@
         </div>
       </div>
 
-      <div id="tiers" style="font-family:'Bebas Neue',sans-serif; letter-spacing:0.2em; font-size:1rem; color:var(--white); margin:2rem 0 1rem; padding-bottom:0.5rem; border-bottom:1px solid var(--border);">Support Tiers</div>
+      <!-- CUSTOM AMOUNT FIRST -->
+      <div class="fund-custom reveal">
+        <div class="fund-custom-title">Contribute Any Amount</div>
+        <p class="fund-custom-desc" style="margin-bottom:1.5rem;">Every contribution, big or small, helps us move one step closer to bringing <em>Maya</em> to life.</p>
+        <form id="customContribForm" action="https://formspree.io/f/xkoawzez" method="POST">
+          <div class="custom-form-grid">
+            <input type="text" name="name" placeholder="Your Full Name" required
+              style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); color:#e8e4dc; padding:0.8rem 1rem; font-family:'Cormorant Garamond',serif; font-size:1rem; outline:none; width:100%;" />
+            <input type="email" name="email" placeholder="Email Address" required
+              style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); color:#e8e4dc; padding:0.8rem 1rem; font-family:'Cormorant Garamond',serif; font-size:1rem; outline:none; width:100%;" />
+            <input type="tel" name="mobile" placeholder="Mobile Number" required
+              style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); color:#e8e4dc; padding:0.8rem 1rem; font-family:'Cormorant Garamond',serif; font-size:1rem; outline:none; width:100%;" />
+            <div style="position:relative;">
+              <span style="position:absolute; left:1rem; top:50%; transform:translateY(-50%); color:#c9a84c; font-family:'Bebas Neue',sans-serif; font-size:1rem;">₹</span>
+              <input type="number" name="amount" placeholder="Amount (e.g. 500)" required min="1"
+                style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); color:#e8e4dc; padding:0.8rem 1rem 0.8rem 2rem; font-family:'Cormorant Garamond',serif; font-size:1rem; outline:none; width:100%;" />
+            </div>
+          </div>
+          <button type="submit" class="fund-custom-btn" id="contribSubmitBtn" style="margin-top:1rem; width:100%;">Proceed to Pay →</button>
+          <p id="contribFormStatus" style="display:none; margin-top:0.8rem; text-align:center; font-size:0.85rem; letter-spacing:0.1em;"></p>
+        </form>
+      </div>
+
+      <!-- TIERS BELOW CUSTOM -->
+      <div id="tiers" style="font-family:'Bebas Neue',sans-serif; letter-spacing:0.2em; font-size:1rem; color:var(--white); margin:2.5rem 0 1rem; padding-bottom:0.5rem; border-bottom:1px solid var(--border);">Support Tiers</div>
       <div class="fund-tiers-new">
 
         <!-- TIER 1 -->
@@ -2574,29 +2727,6 @@
         🎬 &nbsp; <strong style="color:var(--gold);">All supporters get a VIP Premiere Show Invitation</strong> — be there when Maya meets the world! &nbsp; ❤️
       </div>
 
-      <div class="fund-custom reveal">
-        <div class="fund-custom-title">Contribute Any Amount</div>
-        <p class="fund-custom-desc" style="margin-bottom:1.5rem;">Every contribution, big or small, helps us move one step closer to bringing <em>Maya</em> to life.</p>
-        <form name="custom-contribution" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" id="customContribForm">
-          <input type="hidden" name="form-name" value="custom-contribution" />
-          <p style="display:none;"><input name="bot-field" /></p>
-          <div class="custom-form-grid">
-            <input type="text" name="name" placeholder="Your Full Name" required
-              style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); color:#e8e4dc; padding:0.8rem 1rem; font-family:'Cormorant Garamond',serif; font-size:1rem; outline:none; width:100%;" />
-            <input type="email" name="email" placeholder="Email Address" required
-              style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); color:#e8e4dc; padding:0.8rem 1rem; font-family:'Cormorant Garamond',serif; font-size:1rem; outline:none; width:100%;" />
-            <input type="tel" name="mobile" placeholder="Mobile Number" required
-              style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); color:#e8e4dc; padding:0.8rem 1rem; font-family:'Cormorant Garamond',serif; font-size:1rem; outline:none; width:100%;" />
-            <div style="position:relative;">
-              <span style="position:absolute; left:1rem; top:50%; transform:translateY(-50%); color:#c9a84c; font-family:'Bebas Neue',sans-serif; font-size:1rem;">₹</span>
-              <input type="number" name="amount" placeholder="Amount (e.g. 500)" required min="1"
-                style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); color:#e8e4dc; padding:0.8rem 1rem 0.8rem 2rem; font-family:'Cormorant Garamond',serif; font-size:1rem; outline:none; width:100%;" />
-            </div>
-          </div>
-          <button type="submit" class="fund-custom-btn" style="margin-top:1rem; width:100%;">Proceed to Pay →</button>
-        </form>
-      </div>
-
     </div>
   </div>
 </section>
@@ -2635,11 +2765,7 @@
         </div>
       </div>
       <div class="contact-form reveal reveal-delay-1">
-        <form name="maya-contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/success">
-          <input type="hidden" name="form-name" value="maya-contact" />
-          <p style="display:none;">
-            <input name="bot-field" />
-          </p>
+        <form id="contactForm" action="https://formspree.io/f/xkoawzez" method="POST">
           <div class="form-row">
             <div class="form-group">
               <input type="text" name="name" placeholder="Your Name" required />
@@ -2657,7 +2783,8 @@
           <div class="form-group">
             <textarea name="message" rows="5" placeholder="Your message — tell us how you'd like to be part of Maya..."></textarea>
           </div>
-          <button type="submit" class="form-submit">Send Message</button>
+          <button type="submit" class="form-submit" id="contactSubmitBtn">Send Message</button>
+          <p id="contactFormStatus" style="display:none; margin-top:0.8rem; text-align:center; font-size:0.85rem; letter-spacing:0.1em;"></p>
         </form>
       </div>
     </div>
@@ -2677,7 +2804,6 @@
     <li><a href="/about.html">About Us</a></li>
     <li><a href="/terms.html">Terms & Conditions</a></li>
     <li><a href="/privacy.html">Privacy Policy</a></li>
-    <li><a href="/refund.html">Refund Policy</a></li>
   </ul>
   <p style="margin-top:1.5rem; font-size:0.8rem; color:#444; font-style:italic;">This website is operated by <strong style="color:#666;">Mohith A</strong>, Krishna Nagar, Amey, Kasaragod, Kerala – 671121, India.</p>
   <p class="footer-copy">© 2026 MAYA Film Project. A Kannada Psychological Horror Film. All rights reserved.</p>
@@ -2705,13 +2831,10 @@
         await fetch('/', { method: 'POST', headers: {'Content-Type': 'application/x-www-form-urlencoded'}, body: new URLSearchParams(formData).toString() });
       } catch(err) { console.log('Form submit error', err); }
 
-      // Show QR modal with their amount
+      // Show QR modal with their amount — use openPaymentModal so UPI links update
       btn.textContent = 'Proceed to Pay →';
       btn.disabled = false;
-      document.getElementById('modalTierName').textContent = 'Custom Contribution';
-      document.getElementById('modalTierAmount').textContent = '₹' + parseInt(amount).toLocaleString('en-IN');
-      document.getElementById('paymentModal').style.display = 'flex';
-      document.body.style.overflow = 'hidden';
+      openPaymentModal('Custom Contribution', parseInt(amount));
     });
   }
 
@@ -2808,7 +2931,41 @@
     </div>
     <div style="font-family:'Bebas Neue',sans-serif; font-size:0.85rem; letter-spacing:0.15em; color:#c9a84c; margin-bottom:0.3rem;">Project Maya</div>
     <div style="font-size:0.8rem; color:#7a7a80; margin-bottom:0.3rem;">UPI ID: 8157897275@okbizaxis</div>
-    <div style="font-size:0.75rem; color:#5a5a60; margin-bottom:1.5rem; font-style:italic;">Scan with any UPI app — GPay · PhonePe · Paytm · BHIM</div>
+    <div style="font-size:0.75rem; color:#5a5a60; margin-bottom:1rem; font-style:italic;">Scan with any UPI app — GPay · PhonePe · Paytm · BHIM</div>
+    <div style="font-family:'Bebas Neue',sans-serif; font-size:0.7rem; letter-spacing:0.3em; color:#c9a84c; margin-bottom:0.8rem;">Or tap to open your UPI app directly</div>
+    <div id="upiButtons" style="display:grid; grid-template-columns:1fr 1fr; gap:0.6rem; margin-bottom:1.5rem;">
+      <a id="upiGpay" href="#" onclick="return false;" style="display:flex; align-items:center; justify-content:center; gap:0.4rem; background:#111116; border:1px solid rgba(201,168,76,0.35); color:#e8e4dc; font-size:0.85rem; padding:0.6rem 0.8rem; text-decoration:none; cursor:pointer; font-family:'Bebas Neue',sans-serif; letter-spacing:0.08em; transition:background 0.2s;" onmouseover="this.style.background='rgba(201,168,76,0.1)'" onmouseout="this.style.background='#111116'">
+        <span>📱</span><span>Google Pay</span>
+      </a>
+      <a id="upiPhonepe" href="#" onclick="return false;" style="display:flex; align-items:center; justify-content:center; gap:0.4rem; background:#111116; border:1px solid rgba(201,168,76,0.35); color:#e8e4dc; font-size:0.85rem; padding:0.6rem 0.8rem; text-decoration:none; cursor:pointer; font-family:'Bebas Neue',sans-serif; letter-spacing:0.08em; transition:background 0.2s;" onmouseover="this.style.background='rgba(201,168,76,0.1)'" onmouseout="this.style.background='#111116'">
+        <span>📱</span><span>PhonePe</span>
+      </a>
+      <a id="upiPaytm" href="#" onclick="return false;" style="display:flex; align-items:center; justify-content:center; gap:0.4rem; background:#111116; border:1px solid rgba(201,168,76,0.35); color:#e8e4dc; font-size:0.85rem; padding:0.6rem 0.8rem; text-decoration:none; cursor:pointer; font-family:'Bebas Neue',sans-serif; letter-spacing:0.08em; transition:background 0.2s;" onmouseover="this.style.background='rgba(201,168,76,0.1)'" onmouseout="this.style.background='#111116'">
+        <span>📱</span><span>Paytm</span>
+      </a>
+      <a id="upiBhim" href="#" onclick="return false;" style="display:flex; align-items:center; justify-content:center; gap:0.4rem; background:#111116; border:1px solid rgba(201,168,76,0.35); color:#e8e4dc; font-size:0.85rem; padding:0.6rem 0.8rem; text-decoration:none; cursor:pointer; font-family:'Bebas Neue',sans-serif; letter-spacing:0.08em; transition:background 0.2s;" onmouseover="this.style.background='rgba(201,168,76,0.1)'" onmouseout="this.style.background='#111116'">
+        <span>📱</span><span>BHIM / Any UPI</span>
+      </a>
+    </div>
+
+    <!-- Payment confirmation button (shown after UPI app tap) -->
+    <div id="paymentConfirmSection" style="display:none; margin-top:0.5rem; border-top:1px solid rgba(201,168,76,0.2); padding-top:1.2rem;">
+      <div style="font-size:0.82rem; color:#a0a0a8; margin-bottom:0.8rem; font-style:italic;">Returning from your UPI app?</div>
+      <button id="paymentDoneBtn" onclick="showPaymentSuccess()" style="width:100%; background:rgba(201,168,76,0.15); border:1px solid #c9a84c; color:#c9a84c; font-family:'Bebas Neue',sans-serif; font-size:1rem; letter-spacing:0.15em; padding:0.75rem 1rem; cursor:pointer; transition:background 0.2s;" onmouseover="this.style.background='rgba(201,168,76,0.28)'" onmouseout="this.style.background='rgba(201,168,76,0.15)'">
+        ✓ Yes, I Completed Payment
+      </button>
+      <button onclick="closePaymentModal()" style="width:100%; margin-top:0.5rem; background:none; border:1px solid rgba(255,255,255,0.1); color:#7a7a80; font-family:'Bebas Neue',sans-serif; font-size:0.85rem; letter-spacing:0.1em; padding:0.6rem 1rem; cursor:pointer; transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.05)'" onmouseout="this.style.background='none'">
+        I'll Pay Later
+      </button>
+    </div>
+
+    <!-- Payment success message -->
+    <div id="paymentSuccessMsg" style="display:none; margin-top:1rem; padding:1.2rem; background:rgba(39,174,96,0.1); border:1px solid rgba(39,174,96,0.4);">
+      <div style="font-size:2rem; margin-bottom:0.5rem;">🎬</div>
+      <div style="font-family:'Bebas Neue',sans-serif; font-size:1.2rem; color:#27ae60; letter-spacing:0.1em; margin-bottom:0.4rem;">Thank You for Supporting Maya!</div>
+      <div style="font-size:0.82rem; color:#a0a0a8; line-height:1.6;">Your contribution brings us one step closer to the screen. We'll be in touch shortly with your producer credit details.</div>
+      <button onclick="closePaymentModal()" style="margin-top:1rem; background:none; border:1px solid rgba(39,174,96,0.5); color:#27ae60; font-family:'Bebas Neue',sans-serif; font-size:0.9rem; letter-spacing:0.15em; padding:0.6rem 1.5rem; cursor:pointer;">Close</button>
+    </div>
   </div>
 </div>
 
@@ -2819,8 +2976,41 @@
     currentTier = { tierName, amount };
     document.getElementById('modalTierName').textContent = tierName;
     document.getElementById('modalTierAmount').textContent = '₹' + amount.toLocaleString('en-IN');
+
+    // Reset confirmation UI state
+    document.getElementById('paymentConfirmSection').style.display = 'none';
+    document.getElementById('paymentSuccessMsg').style.display = 'none';
+    document.getElementById('upiButtons').style.display = 'grid';
+
+    // UPI deep links
+    const upiId = '8157897275@okbizaxis';
+    const pn = 'ProjectMaya';
+    const tn = encodeURIComponent(tierName);
+    const am = amount;
+    document.getElementById('upiGpay').href    = `tez://upi/pay?pa=${upiId}&pn=${pn}&am=${am}&tn=${tn}&cu=INR`;
+    document.getElementById('upiPhonepe').href = `phonepe://pay?pa=${upiId}&pn=${pn}&am=${am}&tn=${tn}&cu=INR`;
+    document.getElementById('upiPaytm').href   = `paytmmp://pay?pa=${upiId}&pn=${pn}&am=${am}&tn=${tn}&cu=INR`;
+    document.getElementById('upiBhim').href    = `upi://pay?pa=${upiId}&pn=${pn}&am=${am}&tn=${tn}&cu=INR`;
+
+    // Show confirm section when any UPI button is tapped
+    ['upiGpay','upiPhonepe','upiPaytm','upiBhim'].forEach(id => {
+      const el = document.getElementById(id);
+      el.removeAttribute('onclick');
+      el.addEventListener('click', function() {
+        setTimeout(function() {
+          document.getElementById('paymentConfirmSection').style.display = 'block';
+        }, 1800); // show after 1.8s — gives app time to open
+      }, { once: true });
+    });
+
     document.getElementById('paymentModal').style.display = 'flex';
     document.body.style.overflow = 'hidden';
+  }
+
+  function showPaymentSuccess() {
+    document.getElementById('upiButtons').style.display = 'none';
+    document.getElementById('paymentConfirmSection').style.display = 'none';
+    document.getElementById('paymentSuccessMsg').style.display = 'block';
   }
 
   function closePaymentModal() {
@@ -2832,37 +3022,119 @@
     if (e.target === this) closePaymentModal();
   });
 
-  // COUNTDOWN to Monday June 1, 2026 8:00 PM IST (UTC+5:30 = 14:30 UTC)
+  // COUNTDOWN: launches June 3 2026 8PM IST, ends June 18 2026 8PM IST
   function updateCountdown() {
     const now = new Date();
-    const end = new Date('2026-06-01T14:30:00Z'); // 8:00 PM IST
-    const diff = end - now;
-    const cdDays = document.getElementById('cd-days');
+    const launch = new Date('2026-06-03T14:30:00Z'); // June 3, 8:00 PM IST
+    const close  = new Date('2026-06-18T14:30:00Z'); // June 18, 8:00 PM IST
+    const cdDays  = document.getElementById('cd-days');
     const cdHours = document.getElementById('cd-hours');
-    const cdMins = document.getElementById('cd-minutes');
-    const cdSecs = document.getElementById('cd-seconds');
+    const cdMins  = document.getElementById('cd-minutes');
+    const cdSecs  = document.getElementById('cd-seconds');
+    const sub     = document.querySelector('.countdown-subtitle');
+    const endLabel = document.querySelector('.countdown-end-label');
     if (!cdDays) return;
-    if (diff <= 0) {
-      cdDays.textContent = '00'; cdHours.textContent = '00';
-      cdMins.textContent = '00'; cdSecs.textContent = '00';
-      const sub = document.querySelector('.countdown-subtitle');
-      if (sub) sub.textContent = 'The campaign is now live. Support Maya today.';
-      return;
-    }
-    const days    = Math.floor(diff / (1000*60*60*24));
-    const hours   = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
-    const minutes = Math.floor((diff % (1000*60*60)) / (1000*60));
-    const seconds = Math.floor((diff % (1000*60)) / 1000);
     const pad = n => String(n).padStart(2, '0');
-    cdDays.textContent    = pad(days);
-    cdHours.textContent   = pad(hours);
-    cdMins.textContent    = pad(minutes);
-    cdSecs.textContent    = pad(seconds);
-    const sub = document.querySelector('.countdown-subtitle');
-    if (sub) sub.textContent = `Campaign launches in ${days} day${days !== 1 ? 's' : ''}, ${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
+
+    if (now < launch) {
+      // Phase 1: counting down to launch
+      const diff = launch - now;
+      const days    = Math.floor(diff / (1000*60*60*24));
+      const hours   = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+      const minutes = Math.floor((diff % (1000*60*60)) / (1000*60));
+      const seconds = Math.floor((diff % (1000*60)) / 1000);
+      cdDays.textContent  = pad(days);
+      cdHours.textContent = pad(hours);
+      cdMins.textContent  = pad(minutes);
+      cdSecs.textContent  = pad(seconds);
+      if (sub) sub.textContent = 'Campaign goes live tonight at 8:00 PM IST · Ends June 18.';
+      if (endLabel) endLabel.textContent = 'Campaign Launches Tonight · June 3, 8:00 PM IST';
+    } else if (now < close) {
+      // Phase 2: campaign is live — count down to close
+      const diff = close - now;
+      const days    = Math.floor(diff / (1000*60*60*24));
+      const hours   = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+      const minutes = Math.floor((diff % (1000*60*60)) / (1000*60));
+      const seconds = Math.floor((diff % (1000*60)) / 1000);
+      cdDays.textContent  = pad(days);
+      cdHours.textContent = pad(hours);
+      cdMins.textContent  = pad(minutes);
+      cdSecs.textContent  = pad(seconds);
+      if (sub) sub.textContent = `Campaign is LIVE — closes in ${days} day${days !== 1 ? 's' : ''}, ${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
+      if (endLabel) endLabel.textContent = 'Campaign Closes · June 18, 8:00 PM IST';
+    } else {
+      // Phase 3: campaign closed
+      cdDays.textContent = '00'; cdHours.textContent = '00';
+      cdMins.textContent = '00'; cdSecs.textContent  = '00';
+      if (sub) sub.textContent = 'The campaign has ended. Thank you for your support.';
+      if (endLabel) endLabel.textContent = 'Campaign Closed · June 18, 2026';
+    }
   }
   updateCountdown();
   setInterval(updateCountdown, 1000);
+
+  // ── Formspree AJAX submission ──────────────────────────────────────────
+  async function submitToFormspree(form, btnId, statusId, successMsg) {
+    const btn    = document.getElementById(btnId);
+    const status = document.getElementById(statusId);
+    const data   = new FormData(form);
+
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    status.style.display = 'none';
+
+    try {
+      const res = await fetch('https://formspree.io/f/xkoawzez', {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        form.reset();
+        status.style.color  = '#c9a84c';
+        status.textContent  = successMsg;
+        status.style.display = 'block';
+        btn.textContent = 'Sent ✓';
+        setTimeout(() => {
+          btn.disabled = false;
+          btn.textContent = btn.dataset.label;
+          status.style.display = 'none';
+        }, 5000);
+      } else {
+        const json = await res.json();
+        throw new Error((json.errors || []).map(e => e.message).join(', ') || 'Submission failed');
+      }
+    } catch (err) {
+      status.style.color  = '#e74c3c';
+      status.textContent  = 'Something went wrong. Please try again.';
+      status.style.display = 'block';
+      btn.disabled = false;
+      btn.textContent = btn.dataset.label;
+    }
+  }
+
+  // Contact form
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    document.getElementById('contactSubmitBtn').dataset.label = 'Send Message';
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      submitToFormspree(this, 'contactSubmitBtn', 'contactFormStatus',
+        '✦ Message received — we\'ll be in touch soon.');
+    });
+  }
+
+  // Custom contribution form
+  const contribForm = document.getElementById('customContribForm');
+  if (contribForm) {
+    document.getElementById('contribSubmitBtn').dataset.label = 'Proceed to Pay →';
+    contribForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      submitToFormspree(this, 'contribSubmitBtn', 'contribFormStatus',
+        '✦ Details received — proceed with your UPI payment above.');
+    });
+  }
 </script>
 </body>
 </html>
