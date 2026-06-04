@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MAYA ಮಾಯಾ — A Psychological Horror Film</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Bebas+Neue&family=Noto+Sans+Kannada:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Bebas+Neue&family=Noto+Sans+Kannada:wght@300;400;600&family=Tiro+Kannada:ital@0;1&display=swap" rel="stylesheet">
 <style>
   :root {
     --black: #080808;
@@ -400,12 +400,13 @@
   }
   .hero-title-kannada {
     display: block;
-    font-family: 'Noto Sans Kannada', sans-serif;
-    font-size: clamp(1.5rem, 5vw, 3.5rem);
-    font-weight: 300;
+    font-family: 'Tiro Kannada', 'Noto Sans Kannada', serif;
+    font-size: clamp(2rem, 6vw, 4.5rem);
+    font-weight: 400;
     color: var(--gold);
-    letter-spacing: 0.25em;
-    margin-top: 0.3rem;
+    letter-spacing: 0.12em;
+    margin-top: 0.2rem;
+    text-shadow: 0 0 30px rgba(201,168,76,0.35);
     animation: fadeIn 1.5s 0.7s both;
   }
 
@@ -849,10 +850,21 @@
     border-top: 1px solid rgba(201,168,76,0.15);
   }
   .believers-inner {
-    max-width: 680px;
+    max-width: 1000px;
     margin: 0 auto;
     text-align: center;
     padding: 0 2rem;
+  }
+  .believers-cards-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  @media (max-width: 640px) {
+    .believers-cards-row {
+      grid-template-columns: 1fr;
+    }
   }
   .believers-eyebrow {
     font-family: 'Bebas Neue', sans-serif;
@@ -1185,6 +1197,79 @@
     justify-content: space-between;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+  }
+
+  /* Progress bar embedded inside countdown section */
+  .countdown-progress {
+    max-width: 560px;
+    margin: 2rem auto 0;
+    padding: 1.4rem 1.6rem;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-top: 2px solid var(--red);
+  }
+  .countdown-progress-goals {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.9rem;
+  }
+  .countdown-progress-goal { display: flex; flex-direction: column; }
+  .countdown-progress-goal.right { text-align: right; }
+  .countdown-progress-amt {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 0.05em;
+    color: var(--white);
+    line-height: 1;
+  }
+  .countdown-progress-lbl {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    margin-top: 0.2rem;
+  }
+  .countdown-progress-bar {
+    width: 100%;
+    height: 6px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 3px;
+    overflow: visible;
+    position: relative;
+    margin-bottom: 0.7rem;
+  }
+  .countdown-progress-fill {
+    height: 100%;
+    background: linear-gradient(to right, var(--red), var(--gold));
+    border-radius: 3px;
+    transition: width 1.2s ease;
+  }
+  .countdown-progress-marker {
+    position: absolute;
+    top: -4px;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 14px;
+    background: rgba(255,255,255,0.25);
+  }
+  .countdown-progress-marker-lbl {
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.58rem;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .countdown-progress-meta {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.65rem;
     letter-spacing: 0.15em;
     color: var(--muted);
   }
@@ -2258,7 +2343,7 @@
     <div class="progress-strip-inner reveal">
       <div class="progress-strip-goals">
         <div class="progress-strip-goal">
-          <span class="psg-amount">₹50,000</span>
+          <span class="psg-amount">₹60,000</span>
           <span class="psg-label">Raised so far</span>
         </div>
         <div class="progress-strip-goal center">
@@ -2271,14 +2356,14 @@
         </div>
       </div>
       <div class="progress-strip-bar">
-        <div class="progress-strip-fill" style="width:7.1%"></div>
+        <div class="progress-strip-fill" style="width:8.6%"></div>
         <div class="progress-strip-marker" style="left:28%">
           <span class="psm-label">₹7L</span>
         </div>
       </div>
       <div class="progress-strip-meta">
-        <span class="psm-raised">₹50,000 Raised · 7.1% of Phase One Goal</span>
-        <span class="psm-backers">1 Backer</span>
+        <span class="psm-raised">₹60,000 Raised · 8.6% of Phase One Goal</span>
+        <span class="psm-backers">2 Backers</span>
       </div>
     </div>
   </div>
@@ -2290,13 +2375,22 @@
     <div class="believers-inner">
       <p class="believers-eyebrow reveal">The First Believers</p>
       <h2 class="believers-title reveal">Every Film Begins With a Dream</h2>
-      <p class="believers-intro reveal">But some people choose to believe in that dream even before the world sees it. We extend our heartfelt gratitude to our early supporter for standing with independent Kannada storytelling from the very beginning.</p>
+      <p class="believers-intro reveal">But some people choose to believe in that dream even before the world sees it. We extend our heartfelt gratitude to our early supporters for standing with independent Kannada storytelling from the very beginning.</p>
 
-      <div class="believer-card reveal">
-        <div class="believers-eyebrow" style="margin-bottom:0.5rem;">Early Production Support</div>
-        <div class="believer-name"><span style="font-size:1.15em;">Orfin Biocare Pvt. Ltd.</span> · <span style="font-size:0.82em;">Harikiran H</span></div>
-        <div class="believer-amount">₹50,000</div>
-        <div class="believer-desc">Contributed towards the journey of MAYA (ಮಾಯಾ)</div>
+      <div class="believers-cards-row">
+        <div class="believer-card reveal">
+          <div class="believers-eyebrow" style="margin-bottom:0.5rem;">Early Production Support</div>
+          <div class="believer-name"><span style="font-size:1.15em;">Orfin Biocare Pvt. Ltd.</span> · <span style="font-size:0.82em;">Harikiran H</span></div>
+          <div class="believer-amount">₹50,000</div>
+          <div class="believer-desc">Contributed towards the journey of MAYA (ಮಾಯಾ)</div>
+        </div>
+
+        <div class="believer-card reveal">
+          <div class="believers-eyebrow" style="margin-bottom:0.5rem;">Crowdfunding Supporter</div>
+          <div class="believer-name"><span style="font-size:1.15em;">Jayakarthi</span> · <span style="font-size:0.82em;">Musician</span></div>
+          <div class="believer-amount">₹10,000</div>
+          <div class="believer-desc">Contributed towards the journey of MAYA (ಮಾಯಾ)</div>
+        </div>
       </div>
 
       <p class="believers-gratitude reveal">This support is more than a contribution — it is trust, encouragement, and belief in cinema created with passion.<br><br>With gratitude ❤️</p>
@@ -2304,6 +2398,51 @@
   </div>
 </section>
 
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <p class="section-label reveal">The Film</p>
+    <h2 class="section-title reveal">What is <em>Maya?</em></h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="reveal">
+          <strong>MAYA (ಮಾಯಾ)</strong> is a Kannada psychological horror film that dares to go where no Kannada film has gone in over a decade. It is not about monsters, ghosts or jump-scares — it is about the horror that lives inside the human mind.
+        </p>
+        <p class="reveal reveal-delay-1">
+          Set entirely within <strong>a single location</strong>, the story follows a female protagonist whose grip on reality begins to fracture. What unfolds is a labyrinthine psychological journey — layered, intimate, and deeply unsettling.
+        </p>
+        <p class="reveal reveal-delay-2">
+          The script is complete. The crew is assembled. The cast — four deeply talented artists — is committed. All we need now is the one thing that makes cinema possible: <strong>a community of believers willing to back a bold vision.</strong>
+        </p>
+        <p class="reveal reveal-delay-3 hero-indie-tag" style="border-left: 2px solid var(--red); padding-left: 1rem; font-style: italic;">
+          This is a fully independent production — not backed by any studio or production house. Every frame is funded by people who believe in the power of honest storytelling.
+        </p>
+        <p class="reveal reveal-delay-3">
+          The film will also be <strong>dubbed in Malayalam</strong> — a natural extension of its roots. Maya is set in <strong>Kasaragod</strong>, a culturally rich border region where Kannada, Tulu, and Malayalam languages and traditions beautifully coexist. The story speaks directly to this shared cultural identity, making it resonate just as deeply with Malayalam audiences.
+        </p>
+      </div>
+      <div class="about-stats reveal reveal-delay-1">
+        <div class="stat-box">
+          <span class="stat-number">4</span>
+          <span class="stat-label">Artists in Cast</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number">1</span>
+          <span class="stat-label">Single Location</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number">10+</span>
+          <span class="stat-label">Years Since This Genre</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Script Complete</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- WHY THIS FILM MATTERS — MERGED -->
 <section class="why-crowdfunding" id="why-crowdfunding">
@@ -2315,7 +2454,7 @@
     <div class="wcf-part-label reveal">The Vision</div>
     <blockquote class="why-quote reveal" style="margin: 0 0 3rem;">
       "In the last 10 to 15 years, the Kannada film industry has produced little that pushes the boundaries of psychological horror. Maya is not just a film — it is a statement. A proof that Kannada storytelling can be intimate, bold, and deeply original."
-      <cite>— The Creative Team behind MAYA</cite>
+      <cite>— Mohith Sadashiv, Director</cite>
     </blockquote>
 
     <!-- PART 2: The Story -->
@@ -2410,51 +2549,6 @@
         </div>
         <div class="whatif-quote">
           "Whatever happens — Maya will be made. Your support only determines how fast we get there."
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="container">
-    <p class="section-label reveal">The Film</p>
-    <h2 class="section-title reveal">What is <em>Maya?</em></h2>
-    <div class="about-grid">
-      <div class="about-text">
-        <p class="reveal">
-          <strong>MAYA (ಮಾಯಾ)</strong> is a Kannada psychological horror film that dares to go where no Kannada film has gone in over a decade. It is not about monsters, ghosts or jump-scares — it is about the horror that lives inside the human mind.
-        </p>
-        <p class="reveal reveal-delay-1">
-          Set entirely within <strong>a single location</strong>, the story follows a female protagonist whose grip on reality begins to fracture. What unfolds is a labyrinthine psychological journey — layered, intimate, and deeply unsettling.
-        </p>
-        <p class="reveal reveal-delay-2">
-          The script is complete. The crew is assembled. The cast — four deeply talented artists — is committed. All we need now is the one thing that makes cinema possible: <strong>a community of believers willing to back a bold vision.</strong>
-        </p>
-        <p class="reveal reveal-delay-3 hero-indie-tag" style="border-left: 2px solid var(--red); padding-left: 1rem; font-style: italic;">
-          This is a fully independent production — not backed by any studio or production house. Every frame is funded by people who believe in the power of honest storytelling.
-        </p>
-        <p class="reveal reveal-delay-3">
-          The film will also be <strong>dubbed in Malayalam</strong> — a natural extension of its roots. Maya is set in <strong>Kasaragod</strong>, a culturally rich border region where Kannada, Tulu, and Malayalam languages and traditions beautifully coexist. The story speaks directly to this shared cultural identity, making it resonate just as deeply with Malayalam audiences.
-        </p>
-      </div>
-      <div class="about-stats reveal reveal-delay-1">
-        <div class="stat-box">
-          <span class="stat-number">4</span>
-          <span class="stat-label">Artists in Cast</span>
-        </div>
-        <div class="stat-box">
-          <span class="stat-number">1</span>
-          <span class="stat-label">Single Location</span>
-        </div>
-        <div class="stat-box">
-          <span class="stat-number">10+</span>
-          <span class="stat-label">Years Since This Genre</span>
-        </div>
-        <div class="stat-box">
-          <span class="stat-number">100%</span>
-          <span class="stat-label">Script Complete</span>
         </div>
       </div>
     </div>
@@ -2583,51 +2677,41 @@
 
 <!-- TEAM -->
 
-<!-- COUNTDOWN -->
-<section class="countdown-section" id="countdown">
-  <div class="container">
-    <div class="countdown-inner">
-      <h2 class="section-title reveal" style="font-size: clamp(2rem, 5vw, 4rem); line-height: 1; margin-bottom: 1.5rem;">Crowdfunding <em>Countdown</em></h2>
-
-      <div class="countdown-grid reveal" id="countdownGrid">
-        <div class="countdown-unit">
-          <div class="countdown-number" id="cd-days">--</div>
-          <div class="countdown-label">Days</div>
-        </div>
-        <div class="countdown-sep">:</div>
-        <div class="countdown-unit">
-          <div class="countdown-number" id="cd-hours">--</div>
-          <div class="countdown-label">Hours</div>
-        </div>
-        <div class="countdown-sep">:</div>
-        <div class="countdown-unit">
-          <div class="countdown-number" id="cd-minutes">--</div>
-          <div class="countdown-label">Minutes</div>
-        </div>
-        <div class="countdown-sep">:</div>
-        <div class="countdown-unit">
-          <div class="countdown-number" id="cd-seconds">--</div>
-          <div class="countdown-label">Seconds</div>
-        </div>
-      </div>
-
-      <p class="countdown-subtitle reveal" style="margin-top:0.5rem;">Campaign goes live tonight at 8:00 PM IST · Ends June 18.</p>
-      <span class="countdown-end-label reveal">Campaign Launches Tonight · June 3, 8:00 PM IST</span>
-
-      <div class="countdown-cta-wrap reveal">
-        <a href="#fund" class="btn-primary"><span>Support Before It Ends</span></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
 <!-- CROWDFUNDING -->
 <section class="fund" id="fund">
   <div class="container">
     <p class="section-label reveal">Support the Vision</p>
     <h2 class="section-title reveal">Fund <em>Maya</em></h2>
     <p class="reveal" style="font-style:italic; color:var(--muted); margin-top:0.5rem; font-size:1.1rem;">Every contribution — large or small — moves the camera one frame closer to rolling.</p>
+
+    <!-- PROGRESS BAR -->
+    <div class="countdown-progress reveal" style="max-width:860px; margin:2rem auto;">
+      <div class="countdown-progress-goals">
+        <div class="countdown-progress-goal">
+          <span class="countdown-progress-amt">₹60,000</span>
+          <span class="countdown-progress-lbl">Raised So Far</span>
+        </div>
+        <div class="countdown-progress-goal" style="text-align:center;">
+          <span class="countdown-progress-amt" style="color:var(--red);">₹7 Lakhs</span>
+          <span class="countdown-progress-lbl">Phase One Goal</span>
+        </div>
+        <div class="countdown-progress-goal right">
+          <span class="countdown-progress-amt" style="color:var(--gold);">₹25 Lakhs</span>
+          <span class="countdown-progress-lbl">Full Film Goal</span>
+        </div>
+      </div>
+      <div class="countdown-progress-bar">
+        <div class="countdown-progress-fill" style="width:8.6%"></div>
+        <div class="countdown-progress-marker" style="left:28%">
+          <span class="countdown-progress-marker-lbl">₹7L</span>
+        </div>
+      </div>
+      <div class="countdown-progress-meta">
+        <span>₹60,000 Raised · 8.6% of Phase One Goal</span>
+        <span>2 Backers</span>
+      </div>
+    </div>
+
     <div class="fund-inner reveal">
 
       <div class="fund-goals">
@@ -2747,20 +2831,32 @@
         </p>
         <div class="contact-info">
           <div class="contact-item">
-            <span class="contact-icon">📍</span>
-            <span>Kasaragod & Mangalore, Karnataka, India</span>
+            <span class="contact-icon">✍️</span>
+            <span style="color:#e8e4dc; font-weight:700;">Screenplay: Mohith Sadashiv &amp; Harikiran H</span>
           </div>
           <div class="contact-item">
             <span class="contact-icon">🎬</span>
-            <span>Language: Kannada (ಕನ್ನಡ)</span>
+            <span style="color:#e8e4dc; font-weight:700;">Direction: Mohith Sadashiv</span>
           </div>
           <div class="contact-item">
-            <span class="contact-icon">✍️</span>
-            <span>Screenplay & Direction: Mohith Sadashiv</span>
+            <span class="contact-icon">📍</span>
+            <span>Kasaragod, Kerala, India</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">🗣️</span>
+            <span>Language: Kannada (ಕನ್ನಡ)</span>
           </div>
           <div class="contact-item">
             <span class="contact-icon">🎞️</span>
             <span>Status: Pre-Production — Seeking Funding</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📧</span>
+            <span><a href="mailto:projectmaya2026@gmail.com" style="color:var(--gold); text-decoration:none;">projectmaya2026@gmail.com</a></span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📞</span>
+            <span><a href="tel:+918157897275" style="color:var(--gold); text-decoration:none;">+91 81578 97275</a></span>
           </div>
         </div>
       </div>
